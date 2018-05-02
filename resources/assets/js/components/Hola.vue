@@ -1,17 +1,17 @@
 <template>
     <div>
-        <h1>Hola, {{ name }}!</h1>
-
-        <input type="text" v-model="name">
+        <h1>{{computedText}}</h1>
     </div>
 </template>
 
 <script>
     export default {
-        data() {
-            return {
-                name: 'Mr ColdBox'
-            };
+        name: 'Hola',
+        props: ['text'],
+        computed: {
+            computedText: function() {
+                return `!!! ${this.text} !!!`
+            }
         }
     };
 </script>
