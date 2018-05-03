@@ -1,14 +1,21 @@
 {
     "private": true,
     "devDependencies": {
-        "gulp": "^3.9.1",
         "coldbox-elixir": "^2.1.2",
+        "coldbox-elixir-browsersync": "^1.2.0",
         "coldbox-elixir-vue-2": "^2.0.0",
-        "coldbox-elixir-webpack": "^2.0.1"
+        "coldbox-elixir-webpack": "^2.0.1",
+        "css-loader": "^0.28.11",
+        "gulp": "^3.9.1",
+        "node-sass": "^4.9.0",
+        "sass-loader": "^7.0.1",
+        "style-loader": "^0.21.0"
     },
     "dependencies": {
-        "bootstrap-sass": "^3.3.7",
-        "vue": "^2.5.13",
+        "vue": "^2.5.16",
         "vue-router": "^3.0.1"
+    },
+    "scripts": {
+        "start": "box start && gulp watch"
     }
 }

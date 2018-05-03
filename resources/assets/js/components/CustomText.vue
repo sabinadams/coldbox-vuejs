@@ -1,23 +1,23 @@
 <template>
-    <div>
+    <div class="test">
         <h1>{{computedText}}</h1>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Hola',
+        name: 'CustomText',
         props: ['text'],
         computed: {
             computedText: function() {
                 return `!!! ${this.text} !!!`
             }
         }
-    };
+    }
 </script>
 
-<style>
-    h1 {
-        color: green;
-    }
+<style scoped lang="scss">
+   h1 {
+       color: green;
+   }
 </style>

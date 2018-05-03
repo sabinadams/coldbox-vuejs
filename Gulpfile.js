@@ -15,7 +15,12 @@ require( "coldbox-elixir-vue-2" );
 
 elixir( function( mix ){
 	// Mix App styles
-	mix.sass( "App.scss" )
-		// Mix JS and VueJS components
-		.webpack( "App.js" );
+	mix.sass( ["App.scss"] )
+	// Mix JS and VueJS components
+	.webpack( ["App.js"] )
+	.browserSync({
+		proxy : 'localhost:64608',
+		files: ['./resources/assets'],
+		// reloadDelay: 600, // <- makes sass folder items reload correctly
+	})
 } );

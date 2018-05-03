@@ -1,29 +1,29 @@
 <template>
   <div id="homepage">
-    <h2> This is the home page </h2>
+    <h1> This is the home page </h1>
     <hola :text="text"/>
     <input type="text" v-model="text">
-
   </div>
 </template>
 
 <script>
     
-    import Hola from '../components/Hola.vue'
+    import CustomText from '../components/CustomText.vue'
 
     export default {
         data () {
             return {
-                text: ''
+                text: 'Placeholder'
             }
         },
         components: {
-            Hola
+            CustomText
         }
-
     }
 
 </script>
-<style>
-  
+<style scoped>
+  .homepage {
+      text-align: center;
+  }
 </style>
